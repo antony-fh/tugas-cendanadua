@@ -1,0 +1,54 @@
+<script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+	<nav class="main-menu">
+		<ul>
+			<li>
+				<a href="<?=base_url()?>">
+					<i class="fa fa-home nav_icon"></i>
+					<span class="nav-text">
+					Dashboard
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?=base_url('pegawai')?>">
+					<i class="fa fa-user-secret nav-icon"></i>
+					<span class="nav-text">
+					Pegawai
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?=base_url('kota')?>">
+					<i class="fa fa-map-marker nav-icon"></i>
+					<span class="nav-text">
+					Kota
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?=base_url('posisi')?>">
+					<i class="fa fa-black-tie nav-icon"></i>
+					<span class="nav-text">
+					Posisi
+					</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="logout">
+			<li>
+			<a href="<?php echo site_url('login/actlogout'); ?>">
+			<i class="icon-off nav-icon"></i>
+			<span class="nav-text">
+			Logout
+			</span>
+			</a>
+			</li>
+		</ul>
+	</nav>

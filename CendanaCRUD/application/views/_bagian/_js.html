@@ -1,0 +1,31 @@
+<script src="<?=base_url('assets/js/jquery2.0.3.min.js')?>"></script>
+<script src="<?=base_url('assets/js/jquery.dataTables.min.js')?>"></script>
+<script src="<?=base_url('assets/js/modernizr.js')?>"></script>
+<script src="<?=base_url('assets/js/jquery.cookie.js')?>"></script>
+<script src="<?=base_url('assets/js/screenfull.js')?>"></script>
+<script type="text/javascript">
+<?php include './assets/js/script.php'; ?>
+</script>
+
+		<script>
+		$(function () {
+			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+			if (!screenfull.enabled) {
+				return false;
+			}
+
+			
+
+			$('#toggle').click(function () {
+				screenfull.toggle($('#container')[0]);
+			});	
+		});
+		</script>
+<!-- charts -->
+<script src="<?=base_url('assets/js/raphael-min.js')?>"></script>
+<script src="<?=base_url('assets/js/morris.js')?>"></script>
+<link rel="stylesheet" href="<?=base_url('assets/css/morris.css')?>">
+<!-- //charts -->
+<!--skycons-icons-->
+<script src="<?=base_url('assets/js/skycons.js')?>"></script>
